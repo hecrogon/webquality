@@ -177,22 +177,6 @@ try:
 except ImportError:
     pass
 
-CRISPY_TEMPLATE_PACK = 'bootstrap'
-
-AUTHENTICATION_BACKENDS = (  
-    'userena.backends.UserenaAuthenticationBackend',  
-    'guardian.backends.ObjectPermissionBackend',  
-    'django.contrib.auth.backends.ModelBackend',  
-)  
-
-ANONYMOUS_USER_ID = -1
-
-AUTH_PROFILE_MODULE = 'accounts.UserProfile'
-  
-USERENA_WITHOUT_USERNAMES = True
-USERENA_SIGNIN_REDIRECT_URL = '/list_webs'
-USERENA_MUGSHOT_GRAVATAR = False
-
 EMAIL_USE_TLS = False
 EMAIL_HOST = 'smtp.shidix.com'
 EMAIL_PORT = 25
@@ -204,5 +188,3 @@ SCRAPY_DOWNLOAD_DELAY = 1
 
 SPIDER_MODULES = ['crawler.spiders']
 NEWSPIDER_MODULE = 'crawler.spiders'
-
-ENDLESS_PAGINATION_PER_PAGE = 20

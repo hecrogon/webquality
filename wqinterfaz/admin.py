@@ -14,9 +14,7 @@ class WebsiteAdmin(admin.ModelAdmin):
         return qs.filter(user=request.user)
 
     def object_link(self, obj):
-        ct = obj.name
-#        url = reverse('admin:%s_%s_change' % (ct.app_label, ct.model), args=(obj.id,)) 
-        url = "http://barrapunto.com"
+        url = reverse('run_test', kwargs={'website_id':obj.id})
         return '<a href="%s">Run</a>' % (url)
     object_link.allow_tags = True
 

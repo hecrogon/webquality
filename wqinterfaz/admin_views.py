@@ -17,7 +17,7 @@ def run_test(request, website_id=None):
             validator = Validator.objects.get(pk=validator_id)
             validator_set[validator.classname] = validator
 
-            validator_parameters = { "fields": {} }
+            validator_parameters = {"fields": {}}
             if validator.parameters is not None:
                 for field in validator.parameters["fields"]:
                     value = request.POST["param_" + str(validator.id) + "_" + field["name"]]
@@ -32,5 +32,5 @@ def run_test(request, website_id=None):
         return render(request, 'admin/running_test.html')
     else:
         validators = Validator.objects.all().order_by('creation_date')
-        return render(request, 'admin/run_test.html', { 'website': website, 'validators': validators })
+        return render(request, 'admin/run_test.html', {'website': website, 'validators': validators})
 

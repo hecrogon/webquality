@@ -16,7 +16,7 @@ urlpatterns = patterns('',
     url(r'^list_validators/$', 'wqinterfaz.views.list_validators', name='site_list_validators'),
     url(r'^view_validator/(?P<validator_id>\d+)/$', 'wqinterfaz.views.view_validator', name='view_validator'),
 
-    url(r'^run_test/(?P<website_id>\d+)/$', 'wqinterfaz.views.run_test', name='run_test'),
+#    url(r'^run_test/(?P<website_id>\d+)/$', 'wqinterfaz.views.run_test', name='run_test'),
 
     url(r'^list_executions/(?P<website_id>\d+)/$', 'wqinterfaz.views.list_executions', name='list_executions'),
     url(r'^view_execution/(?P<execution_id>\d+)/$', 'wqinterfaz.views.view_execution', name='view_execution'),
