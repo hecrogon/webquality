@@ -1,0 +1,15 @@
+{% extends "base_dashboard_body.html" %}
+
+{% load i18n %}
+
+{% block title %}
+	{% trans "Websites" %}
+{% endblock %}
+
+{% block content %}
+	<div class="grid_10">
+		<div class="box round">
+			<h1>{{ website.name }}</h1>
+		</div>
+	</div>
+{% endblock %}

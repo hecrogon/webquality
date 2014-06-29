@@ -1,0 +1,46 @@
+{% extends "base_dashboard_body.html" %}
+
+{% load staticfiles %}
+{% load i18n %}
+
+{% block title %}
+	{% trans "Results" %} <h1>{{ website.name }}</h1>
+{% endblock %}
+
+{% block content %}
+	<div class="grid_10">
+		<div class="box round">
+			<div class="block">
+				<ul>
+					{% for validator in validators %}
+						<li><a href="{% url "view_execution_by_validator" execution.id validator.id %}">{{ validator.name }}</a>
+					{% endfor %}
+				</ul>
+
+				{% if not results %}
+					{% trans "No results." %}
+				{% else %}
+					<table class="table table-striped table-bordered table-hover">
+						<thead>
+							<tr>
+								<th>{% trans "Validator" %}</th>
+								<th>{% trans "Url" %}</th>
+								<th>{% trans "Error" %}</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% include page_template %}
+
+							{% block js %}
+								{{ block.super }}
+								<script src="http://code.jquery.com/jquery-latest.js"></script>
+								<script src="{% static "endless_pagination/js/endless-pagination.js" %}"></script>
+								<script>$.endlessPaginate({paginateOnScroll: true});</script>
+							{% endblock %}
+						</tbody>
+					</table>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

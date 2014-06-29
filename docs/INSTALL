@@ -1,0 +1,34 @@
+Instalar
+ - Django
+ - Python 2.7
+ - PostgreSQL (o el que se quiera)
+ - Scrapy
+		pip2 install Scrappy
+
+		Posiblemente haya que darle permisos del lectura al fichero de tipos del scrapy
+		chmod +r /usr/lib/python2.7/site-packages/Scrapy-0.16.4-py2.7.egg/scrapy/mime.types
+
+ - Beautiful Soup python2-beautifulsoup4
+		pip2 install beautifulsoup4
+
+		En arch linux instalar desde los paquetes
+		pacman -S python2-beautifulsoup4
+
+ - Dyject. Rependency injection
+		pip2 install dyject
+
+		Aglyph
+		http://www.ninthtest.net/aglyph-python-dependency-injection/
+
+ - Hunspell https://www.archlinux.org/packages/extra/any/hunspell-es/files/
+
+PyEnchant   pacman -S hunspell-en hunspell-es
+
+pytidylib   HTML Tidy apt-get install libtidy-0.99-0
+
+apt-get install enchant myspell-es libxml2-dev libxslt1-dev python-dev libtidy-0.99-0
+
+Al crear la base de datos
+python2.7 manage.py syncdb
+python2.7 manage.py check_permissions
+

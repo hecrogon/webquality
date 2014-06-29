@@ -1,0 +1,18 @@
+{% extends "base_dashboard_body.html" %}
+
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+	{% trans "Websites" %}
+{% endblock %}
+
+{% block content %}
+	<form method="post" action="" class="well form-inline" enctype="multipart/form-data">
+		{% crispy form %}
+
+		<div class="form-actions">
+			<input name="submit" value="Submit" class="btn btn-primary" id="submit-id-submit" type="submit">
+		</div>
+	</form>
+{% endblock %}

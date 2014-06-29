@@ -1,0 +1,57 @@
+Crawler
+http://scrapy.org
+http://wwwsearch.sourceforge.net/mechanize/
+
+W3C Validators
+http://srackham.wordpress.com/2011/04/28/w3c-command-line-validator/
+https://github.com/srackham/w3c-validator
+http://maestric.com/doc/python/recursive_w3c_html_validator
+
+Threads
+http://mundogeek.net/archivos/2008/04/18/threads-en-python/
+http://snipplr.com/view/67015/run-scrapy-crawler-in-a-thread/
+
+PDFs
+http://appyframework.org/pod.html
+
+Others
+http://en.wikipedia.org/wiki/MapReduce
+
+Twisted Reactor
+http://twistedmatrix.com/documents/current/core/howto/application.html
+http://orestis.gr/blog/2009/09/25/twisted-reactor-60-seconds/
+Tutorial: http://krondo.com/?page_id=1327
+
+http://stackoverflow.com/questions/1897939/how-do-you-you-run-a-twisted-application-via-python-instead-of-via-twisted
+https://github.com/eagafonov/python-twisted-startup-script/blob/master/python-twisted-startup-script
+
+
+Estilos
+http://www.opendesigns.org/design/blue-ripples/
+http://wrapbootstrap.com
+https://wrapbootstrap.com/theme/3-in-1-admin-front-end-e-commerce-WB0G69690
+
+
+Tema de adminstración gratis
+http://usman.it/free-responsive-admin-template/
+
+Resaltar menú actual
+http://blog.scur.pl/2012/09/highlighting-current-active-page-django/
+
+http://stackoverflow.com/questions/14777910/scrapy-crawl-from-script-always-blocks-script-execution-after-scraping
+
+Scrapy y modelos de django (para los resultados)
+http://www.sammyliu.com/2012/06/22/tutorial-scrapy-and-django
+
+
+Estudiar la posibilidad de usar Json como campo para guardar los resultados. Hay más paquetes
+https://pypi.python.org/pypi/django-json-field
+Url(Test, Validator, Result)
+
+Django y Scrapy
+https://github.com/scrapy/scrapy/wiki
+
+
+SPELLING
+	http://pythonhosted.org/pyenchant/tutorial.html#checking-entire-blocks-of-text
+

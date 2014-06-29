@@ -1,0 +1,21 @@
+{% load endless %}
+
+{% lazy_paginate results %}
+{% for result in results %}
+	<tr>
+		<td>{{ result.validator.name }}</td>
+		<td><a href="{{ result.page.url }}">{{ result.page.url }}</a></td>
+		<td>
+			<ul>
+				{% for error in result.description.errors %}
+					{% if error.url %}
+						<li><a href="{{ error.url }}">{{ error.error }}</a></li>
+					{% else %}
+						<li>{{ error.error }}</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</td>
+	</tr>
+{% endfor %}
+{% show_more %}

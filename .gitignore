@@ -1,0 +1,15 @@
+*pyc
+log.txt
+*.swp
+webquality/local_settings.py
+docs/report/main.aux
+docs/report/main.dvi
+docs/report/main.lof
+docs/report/main.log
+docs/report/main.lot
+docs/report/main.out
+docs/report/main.pdf
+docs/report/main.toc
+docs/report/main.bbl
+docs/report/main.blg
+docs/report/Figures/*pdf

@@ -1,0 +1,18 @@
+{% load endless %}
+
+{% lazy_paginate executions %}
+{% for execution in executions %}
+	<tr>
+		<td>
+			{% for validator in execution.validators.all %}
+				{{ validator.name }}<br/>
+			{% endfor %}
+		</td>
+		<td><a href="{% url "view_execution" execution.id %}">{{ execution.start_date }}</a></td>
+		<td><a href="{% url "view_execution" execution.id %}">{{ execution.end_date }}</a></td>
+		<td>
+			<a href="{% url "view_execution" execution.id %}"><i class="icon-large icon-search"></i></a>
+		</td>
+	</tr>
+{% endfor %}
+{% show_more %}

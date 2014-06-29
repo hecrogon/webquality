@@ -1,0 +1,432 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load staticfiles %}
+
+{% block content %}
+	<!-- Slider starts -->
+	<div class="parallax-slider">
+		<!-- Slider (Parallax Slider) -->						
+		<div id="da-slider" class="da-slider">
+			<!-- Each slide should be enclosed inside "da-slide" class -->
+			<div class="da-slide">
+				<div class="slide-details">
+					<!-- Heading -->
+					<h2><span>{% trans "Evaluate your website quality" %}</span></h2>
+					<!-- Para -->
+					<p>Using WebQuality, you will be able to find out how good is your website according to different parameters.</p>
+					<!-- Read more link -->
+					<a href="{% url "userena_signup" %}" class="da-link">{% trans "Sign up" %}</a>
+					<!-- Image -->
+					<div class="da-img"><img src="{% static "macbeath-frontend/img/parallax/1.png" %}" alt="image01" /></div>
+				</div>
+			</div>
+			<div class="da-slide">
+				<h2><span>{% trans "Find broken links" %}</span></h2>
+				<p>
+					Look for url links pointing to a wrong destination. Website Quality will detect non-existent references and
+					Webpages with errors in order you decide wether change the link or fix the problem.
+				</p>
+				<a href="{% url "userena_signup" %}" class="da-link">{% trans "Sign up" %}</a>
+				<div class="da-img"><img src="{% static "macbeath-frontend/img/parallax/2.png" %}" alt="image01" /></div>
+			</div>
+			<div class="da-slide">
+				<h2><span>{% trans "Misspellings" %}</span></h2>
+				<p>Why don't allow you to this tool checking the spelling in the texts of your website?</p>
+				<a href="{% url "userena_signup" %}" class="da-link">{% trans "Sign up" %}</a>
+				<div class="da-img"><img src="{% static "macbeath-frontend/img/parallax/2.png" %}" alt="image01" /></div>
+			</div>
+			<div class="da-slide">
+				<h2><span>{% trans "Check HTML" %}</span></h2>
+				<p>List all HTML Errors and Warnings.</p>
+				<a href="{% url "userena_signup" %}" class="da-link">{% trans "Sign up" %}</a>
+				<div class="da-img"><img src="{% static "macbeath-frontend/img/parallax/3.png" %}" alt="image01" /></div>
+			</div>
+			{% comment %}
+			<div class="da-slide">
+				<h2><span>{% trans "Electronic Office" %}</span></h2>
+				<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+				<div class="da-img"><img src="{% static "macbeath-frontend/img/parallax/4.png" %}" alt="image01" /></div>
+			</div>
+			{% endcomment %}
+			<nav class="da-arrows">
+				<span class="da-arrows-prev"></span>
+				<span class="da-arrows-next"></span>
+			</nav>
+		</div>
+	</div>
+	<!-- Slider ends -->
+
+	<!-- Below slider starts -->
+	<div class="sep"></div>
+	{% comment %}
+	<div class="slider-features">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-4">
+					<div class="onethree">
+						<div class="onethree-left">
+							<!-- Font awesome icon -->
+							<div class="img"><i class="icon-cloud"></i></div>
+						</div>
+						<div class="onethree-right">
+							<!-- Title and meta -->
+							<h5><a href="#">{% trans "From everywhere" %}</a></h5>
+							<p class="meta">{% trans "Website Quality is available everywhere with your Internet connection." %}</p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="onethree">
+						<div class="onethree-left">
+							<div class="img"><i class="icon-gift"></i></div>
+						</div>
+						<div class="onethree-right">
+							<h5><a href="#">Curatur rhoncus condim eros</a></h5>
+							<p class="meta">Sed diam nisi, pulvinar vitae molestie hendrerit, venenatis eget mauris.</p>
+						</div>
+						<div class="clearfix"></div>	 
+					</div>		 
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="onethree">
+						<div class="onethree-left">
+							<div class="img"><i class="icon-home"></i></div>
+						</div>
+						<div class="onethree-right">
+							<h5><a href="#">Proin porttitor decided eros</a></h5>
+							<p class="meta">Sed diam nisi, pulvinar vitae molestie hendrerit, venenatis eget mauris.</p>
+						</div>
+						<div class="clearfix"></div>	
+					</div>			
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endcomment %}
+	<!-- Below slider ends -->
+
+	<!-- CTA Starts -->
+	{% comment %}
+	<div class="cta">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5 col-sm-5">
+					<div class="ctas">
+						<!-- Title and Para -->
+						<h5>Professional Product Ever Made in Internet</h5>
+						<p>Sed diam nisi, pulvinar vitae molestie vitae molestie hendreri hendrerit, venenatis eget mauris.</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="ctas">
+						<!-- List -->
+						<ul>
+							<li>Very Cheap in Market. Check it today.</li>
+							<li>Professional and Powerful. Don't miss it.</li>
+							<li>1000% Guanrantee. No Worries. No Probs.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-3">
+					<div class="ctas">
+						<!-- Button -->
+						<div class="button"><a href="#">Buy it Today for $99</a></div>
+						<p>limited period offer</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endcomment %}
+	<!-- CTA Ends -->
+
+	<!-- Service style #2 starts -->
+	<div class="container">
+		<div class="service-two">
+			<div class="row">
+				<div class="col-md-12">
+					<h4 class="title">{% trans "Service" %}</h4>
+				</div>
+				<div class="col-md-3 col-sm-3">
+					<h5>What does it make Website Quality an interesting product which will save you a lot of time?</h5>
+				</div>
+				<div class="col-md-3 col-sm-3">
+					<!-- Service heading with font awesome icon -->
+					<h5><i class="icon-gift"></i> Unconcern</h5>
+					<!-- Service para -->
+					<p>Launch your tests and wait and let us work. You will have the results in a while depending on the size of your website.</p>
+				</div>
+				<div class="col-md-3 col-sm-3">
+					<h5><i class="icon-bullhorn"></i> Automation</h5>
+					<p>Automate repetitive tasks is the best way to avoid errors. With this online tool you are going to control those mistakes that you do not realize and fix them when you can.</p>
+				</div>
+				<div class="col-md-3 col-sm-3">
+					<h5><i class="icon-fire"></i> Evolution</h5>
+					<p>Thanks to the ability of register all the errors in your tests, you will be able to check not only what happens, but when too. Ideal if there are many people working in the same project.</p>
+				</div>
+			</div>
+		</div>
+		<hr />
+	</div>
+	<!-- Service style #2 ends -->
+
+	<!-- Recent posts carousel starts -->
+	{% comment %}
+	<div class="recent-posts">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h4 class="title">Recent Posts</h4>
+					<div class="carousel_nav pull-left">
+						<!-- Carousel navigation -->
+						<a class="prev" id="car_prev" href="#"><i class="icon-chevron-left"></i></a>
+						<a class="next" id="car_next" href="#"><i class="icon-chevron-right"></i></a>
+					</div>
+					<div class="clearfix"></div>
+					<ul class="rps-carousel">
+						<!-- Recent posts #1 -->
+						<!-- Each carousel should be enclosed inside "li" tag -->
+						<li>
+							<div class="rp-item">
+								<!-- Image. -->
+								<div class="rp-image">
+									<a href="#"><img src="{% static "macbeath-frontend/img/photos/s1.jpg" %}" alt=""/></a>
+								</div>
+								<div class="rp-details">
+									<!-- Title and para -->
+									<h5><a href="#">Vitae molestie </a></h5>
+									<p>Travel far away to a space station.</p>
+								</div>
+							</div>
+						</li>
+						<!-- Recent posts #2 -->
+						<li>
+							<div class="rp-item">
+								<div class="rp-image">
+									<a href="#"><img src="{% static "macbeath-frontend/img/photos/s2.jpg" %}"alt=""/></a>
+								</div>
+								<div class="rp-details">
+									<h5><a href="#">Sed diam nisi</a></h5>
+									<p>Travel far away to a space station.</p>
+								</div>
+							</div>
+						</li>
+						<!-- Recent posts #3 -->
+						<li>
+							<div class="rp-item">
+								<div class="rp-image">
+									<a href="#"><img src="{% static "macbeath-frontend/img/photos/s3.jpg" %}"alt=""/></a>
+								</div>
+								<div class="rp-details">
+									<h5><a href="#">Nisi vitaetie </a></h5>
+									<p>Travel far away to a space station.</p>
+								</div>
+							</div>
+						</li>
+						<!-- Recent posts #4 -->
+						<li>
+							<div class="rp-item">
+								<div class="rp-image">
+									<a href="#"><img src="{% static "macbeath-frontend/img/photos/s4.jpg" %}"alt=""/></a>
+								</div>
+								<div class="rp-details">
+									<h5><a href="#">Diam nisivitae </a></h5>
+									<p>Travel far away to a space station.</p>
+								</div>
+							</div>
+						</li>
+						<!-- Recent posts #5 -->
+						<li>
+							<div class="rp-item">
+								<div class="rp-image">
+									<a href="#"><img src="{% static "macbeath-frontend/img/photos/s5.jpg" %}"alt=""/></a>
+								</div>
+								<div class="rp-details">
+									<h5><a href="#">Diam nisivitae </a></h5>
+									<p>Travel far away to a space station.</p>
+								</div>
+							</div>
+						</li>
+						<!-- Recent posts #6 -->
+						<li>
+							<div class="rp-item">
+								<div class="rp-image">
+									<a href="#"><img src="{% static "macbeath-frontend/img/photos/s6.jpg" %}"alt=""/></a>
+								</div>
+								<div class="rp-details">
+									<h5><a href="#">Diam nisivitae </a></h5>
+									<p>Travel far away to a space station.</p>
+								</div>
+							</div>
+						</li> 
+						<!-- Recent posts #7 -->
+						<li>
+							<div class="rp-item"> 
+								<div class="rp-image">				
+									<a href="#"><img src="{% static "macbeath-frontend/img/photos/s7.jpg" %}" alt=""/></a>
+								</div>
+								<div class="rp-details">
+									<h5><a href="#">Diam nisivitae </a></h5>
+									<p>Travel far away to a space station.</p>				 
+								</div>								
+							</div>				
+						</li> 
+						<!-- Recent posts #8 -->
+						<li>
+							<div class="rp-item">
+								<div class="rp-image">
+									<a href="#"><img src="{% static "macbeath-frontend/img/photos/s8.jpg" %}" alt=""/></a>
+								</div>
+								<div class="rp-details">
+									<h5><a href="#">Diam nisivitae </a></h5>
+									<p>Travel far away to a space station.</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endcomment %}
+	<!-- Recent Posts ends -->
+
+	{% comment %}
+	<div class="container fsliders">
+		<div class="row">
+			<!-- Testimonial -->
+			<div class="col-md-4">
+				<h5>Testimonials</h5>
+				<div class="testi-flex flexslider">
+					<ul class="slides">
+						<!-- Each slider should be enclosed inside li tag -->
+						<li>
+							<p>Cras enim ipsum luctus at condimentum eleifend. Nullam euismod pelleque condimentum purus libero cursus. Aenean consequat condintum nisi convallis urna.</p>
+							<!-- Author name -->
+							<p class="author pull-right">- <span class="color">Ashok</span>, CEO</p>
+							<div class="clearfix"></div>
+						</li>
+						<li>
+							<p> Nullam in est urna. In vitae condimentum adipiscing enim. Duis eget condimentum risus ac orci sit amet id orci. Etiam ac ante at lorem ultrices elementum.</p>
+							<p class="author pull-right">- <span class="color">Ravi Kumar</span>, CTO</p>
+							<div class="clearfix"></div>
+						</li>
+						<li>
+							<p>Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit.	Curabitur condimentum lacinia nulla vel tellus elementum non mollis justo aliquam. </p>
+							<p class="author pull-right">- <span class="color">Babu</span>, CFO</p>
+							<div class="clearfix"></div>
+						</li>
+						<li>
+							<p>Proin porttitor eros a ante molestie gravida commodo dui adipiscing. Mi pretium condimentum dapibus. Nullam in est urna. In vitae adipiscing enim.</p>
+							<p class="author pull-right">- <span class="color">Raju</span>, CEO</p>
+							<div class="clearfix"></div>
+						</li>								
+					</ul>
+				</div>
+			</div>
+
+			<!-- Tabs -->
+			<div class="col-md-4">
+				<div class="tabs">
+					<h5>Tabs</h5>
+					<ul class="nav nav-tabs">
+						<!-- Use unique name in anchor tag -->
+						<li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+						<li><a href="#profile" data-toggle="tab">Profile</a></li>
+						<li><a href="#messages" data-toggle="tab">Messages</a></li>
+					</ul>
+					<!-- Tab conten -->
+					<div class="tab-content">
+						<!-- "ID" should match "href" value in abouve "nav tabs" -->
+						<div class="tab-pane active" id="home">In ut nulla est. Sed a	mauris. Duis eget risus ac orci vulputate vestibulum sit amet id orci. Etiam ac ante at lorem	. Fusce	leo vitae velit interdum at laoreet justo ullamcorper.</div>
+						<div class="tab-pane" id="profile">Suspendisse id lectus at lorem	posuere. Duis gravida lacus a urna cursus varius. Donec congue odio vitae eros condimentum nec	augue . Integer	enim, porta non	at, ligula.</div>
+						<div class="tab-pane" id="messages">Lorem ipsum elit. Duis vulputate eros nec odio egestas in dictum nisi vehicula. Pellentesque habitant morbi tristique senectus et netus et	fames ac turpis egestas.		</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- About -->
+			<div class="col-md-4">
+				<h5>Our Team</h5>
+				<div class="about-flex flexslider">
+					<ul class="slides">
+						<li>
+							<!-- Image, Name and Designation -->
+							<h6><img src="{% static "macbeath-frontend/img/photos/user-small.jpg" %}" alt="" class="alignleft" />Ashok, CEO <span class="meta">Info Systems</span></h6>
+							<div class="clearfix"></div>
+							<hr />
+							<!-- Para -->
+							<p>Cras enim ipsum luctus at condimentum eleifend. Nullam euismod pelleque purus libero cursus. Aenean consequat condintum nisi convallis urna.</p>
+						</li>
+						<li>
+							<!-- Image, Name and Designation -->
+							<h6><img src="{% static "macbeath-frontend/img/photos/user-small.jpg" %}" alt="" class="alignleft" />Ravi Kumar, CTO <span class="meta">Babu Systems</span></h6>
+							<div class="clearfix"></div>
+							<hr />
+							<!-- Para -->
+							<p>Duis vulputate eros nec odio egestas in dictum nisi vehicula. Pellentesque habitant morbi tristique senectus et netus et	fames ac turpis egestas. </p>
+						</li>
+						<li>
+							<!-- Image, Name and Designation -->
+							<h6><img src="{% static "macbeath-frontend/img/photos/user-small.jpg" %}" alt="" class="alignleft" />Babu Kannan, Manager <span class="meta">Ravi Systems</span></h6>
+							<div class="clearfix"></div>
+							<hr />
+							<!-- Para -->
+							<p>Duis eget risus ac orci vulputate vestibulum sit amet id orci. Etiam ac ante at lorem	. Fusce	leo vitae velit interdum at laoreet justo ullamcorper.</p>
+						</li>							 
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endcomment %}
+	<!-- [Ends] Testimonial (flexslider), About & Twitter Slider (FlexSlider) -->
+
+	<!-- Newsletter starts -->
+	{% comment %}
+	<div class="container newsletter">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="well">
+					<h5>Please fill out the below form</h5>
+					<p>Nulla facilisi. Sed justo dui, scelerisque ut consectetur vel, eleifend id erat. Morbi auctor adipiscing tempor. Phasellus condimentum rutrum aliquet.</p>
+					<form class="form-inline" role="form">
+						<div class="form-group">
+							<input type="text" class="form-control" id="name" placeholder="Enter name">
+						</div>
+						<div class="form-group">
+							<input type="email" class="form-control" id="email" placeholder="Enter email">
+						</div>
+						<button type="submit" class="btn btn-default">Subscribe</button>
+					</form>
+
+					<p>If you have any questions, let me know <a href="mailto:something@gmail.com">something@gmail.com</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endcomment %}
+	<!-- Newsletter ends -->
+
+	<!-- Clients starts -->
+	{% comment %}
+	<div class="container">
+		<div class="row">
+			 <div class="col-md-12">
+				<!-- Clients images -->
+				<div class="clients">
+					<img src="{% static "macbeath-frontend/img/clients/amazon_b.png" %}" alt="" />
+					<img src="{% static "macbeath-frontend/img/clients/google_b.png" %}" alt="" />
+					<img src="{% static "macbeath-frontend/img/clients/twitter_b.png" %}" alt="" />
+					<img src="{% static "macbeath-frontend/img/clients/facebook_b.png" %}" alt="" />
+					<img src="{% static "macbeath-frontend/img/clients/skype_b.png" %}" alt="" />
+					<img src="{% static "macbeath-frontend/img/clients/youtube_b.png" %}" alt="" />
+				</div>
+			 </div>
+		</div>
+	</div>
+	{% endcomment %}
+	<!-- Clients ends -->
+{% endblock %}

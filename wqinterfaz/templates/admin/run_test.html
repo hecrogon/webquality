@@ -1,0 +1,48 @@
+{% extends "admin/base_site.html" %}
+
+{% load i18n %}
+
+{% block title %}New exploration{% endblock %}
+
+{% block content %}
+	<div class="grid_10">
+		<div class="box round">
+			<div class="block">
+				<form method="post" action="">
+					{% csrf_token %}
+
+					<table class="table table-striped table-bordered table-hover">
+						<thead>
+							<tr>
+								<th></th>
+								<th>{% trans "Validator Name" %}</th>
+								<th>{% trans "Parameters" %}</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for validator in validators %}
+								<tr>
+									<td><input type="checkbox" name="validator" value="{{ validator.id }}" /></td>
+									<td>{{ validator.name }}</td>
+									<td>
+										<table>
+											{% for field in validator.parameters.fields %}
+												<tr>
+													<td>{{ field.description }}</td>
+													<td><input type="text" id="param_{{ validator.id }}_{{ field.name }}" name="param_{{ validator.id }}_{{ field.name }}" value="{{ field.default_value }}"/></td> 
+												</tr>
+											{% endfor %}
+										</table>
+									</td>
+								</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+
+					<input type="hidden" name="website_id" value="{{ website.id }}" />
+					<button type="submit" class="btn btn-primary">{% trans "Submit" %}</button>
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load url from future %}
+{% load crispy_forms_tags %}
+
+{% block title %}{% trans "Signup" %}{% endblock %}
+
+{% block content %}
+	<div class="content">
+		<div class="container">
+			<div class="row">
+				{% include "sign_lefttext.html" %}
+
+				<!-- Form -->
+				<div class="col-md-6">
+					<div class="formy well">
+						<!-- Title -->
+						<h4 class="title">Register for New Account</h4>
+						<div class="form">
+							{% crispy form %}
+							Already have an Account? <a href="{% url "userena_signin" %}">{% trans "Login" %}</a>
+						</div> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- CTA Starts -->
+	{% include "sign_bottom.html" %}
+	<!-- CTA Ends -->
+{% endblock %}

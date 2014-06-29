@@ -1,0 +1,20 @@
+{% extends "base_dashboard_body.html" %}
+
+{% load i18n %}
+
+{% block title %}
+	{% trans "Validators" %}
+{% endblock %}
+
+{% block content %}
+	<div class="grid_10">
+		<div class="box round">
+			<ul>
+				{% for validator in validators %}
+					<li><a href="{% url "view_validator" validator.id %}">{{ validator.name }}</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+{% endblock %}
+

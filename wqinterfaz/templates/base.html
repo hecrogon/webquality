@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% load staticfiles %}
+	{% load i18n %}
+	{% load url from future %}
+	{% load current from base_extras %}
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<!-- Title and other stuffs -->
+	<title>Website Quality</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="web quality, test, webpages, rank">
+	<meta name="author" content="">
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+	<!-- Stylesheets -->
+	<link href="{% static "macbeath-frontend/css/bootstrap.css" %}" rel="stylesheet">
+	<!-- Pretty Photo -->
+	<link href="{% static "macbeath-frontend/css/prettyPhoto.css" %}" rel="stylesheet">
+	<!-- Flex slider -->
+	<link href="{% static "macbeath-frontend/css/flexslider.css" %}" rel="stylesheet">
+	<!-- Font awesome icon -->
+	<link rel="stylesheet" href="{% static "macbeath-frontend/css/font-awesome.css" %}">
+	<!-- Parallax slider -->
+	<link rel="stylesheet" href="{% static "macbeath-frontend/css/slider.css" %}">
+	<!-- Refind slider -->
+	<link rel="stylesheet" href="{% static "macbeath-frontend/css/refineslide.css" %}">	
+	<!-- Main stylesheet -->
+	<link href="{% static "macbeath-frontend/css/style.css" %}" rel="stylesheet">
+	<!-- Stylesheet for Color -->
+	<link href="{% static "macbeath-frontend/css/orange.css" %}" rel="stylesheet">
+	
+	<!-- HTML5 Support for IE -->
+	<!--[if lt IE 9]>
+	<script src="js/html5shim.js"></script>
+	<![endif]-->
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="{% static "macbeath-frontend/img/favicon/favicon.png" %}">
+</head>
+
+<body>
+<!-- Header starts -->
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-3">
+					<!-- Logo. Use class "color" to add color to the text. -->
+					<div class="logo">
+						<h1><a href="{% url "index" %}">Website<span class="color bold">Quality</span></a></h1>
+						<p class="meta">{% trans "BETA" %}</p>
+					</div>
+				</div>
+
+				<div class="col-md-8 col-sm-9">
+					<!-- Navigation -->
+					<div class="navbar bs-docs-nav" role="banner">
+						<div class="container">
+							<div class="navbar-header">
+								<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+
+								<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+									<ul class="nav navbar-nav">
+										{% comment %}
+										<li><a href="index.html">Home</a></li>
+										{% endcomment %}
+
+										<li class="{% current 'index' %}"><a href="{% url "index" %}">{% trans "Home" %}</a></li>
+										{% if user.is_authenticated %}
+											<li class="{% current 'dashboard' %}"><a href="{% url "dashboard" %}">{% trans "Dashboard" %}</a></li>
+											<li class="{% current 'userena_signout' %}"><a href="{% url "userena_signout" %}">{% trans "Logout" %}</a></li>
+										{% else %}
+											<li class="{% current 'userena_signup' %}"><a href="{% url "userena_signup" %}">{% trans "Register" %}</a></li>
+											<li class="{% current 'userena_signin' %}"><a href="{% url "userena_signin" %}">{% trans "Login" %}</a></li>
+										{% endif %}
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+<!-- Seperator -->
+	<div class="sep"></div>
+<!-- Header ends -->
+
+{% block content %}{% endblock %}
+
+<!-- Footer starts -->
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="widget">
+							<h5>{% trans "Contact" %}</h5>
+							<hr />
+							<p>{% trans "If you have any question do not hesitate in contact us." %}</p>
+							<hr />
+							<i class="icon-home"></i> &nbsp; Tenerife. Spain.
+							<hr />
+							{% comment %}
+							<i class="icon-phone"></i> &nbsp; +239-3823-3434
+							<hr />
+							{% endcomment %}
+							<i class="icon-envelope-alt"></i> &nbsp; <a href="mailto:info@shidix.com">info@shidix.com</a>
+							<hr />
+							<div class="social">
+								<a href="https://www.facebook.com/ShidixTechnologies"><i class="icon-facebook facebook"></i></a>
+								{% comment %}
+								<a href="#"><i class="icon-twitter twitter"></i></a>
+								{% endcomment %}
+								<a href="http://es.linkedin.com/pub/h%C3%A9ctor-rojas-gonz%C3%A1lez/40/809/a87/"><i class="icon-linkedin linkedin"></i></a>
+								{% comment %}
+								<a href="#"><i class="icon-google-plus google-plus"></i></a> 
+								{% endcomment %}
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="widget">
+							<h5>{% trans "About Us" %}</h5>
+							<hr />
+							<p>{% trans "Experts in develop software applications either web or mobile, we have the maxim of hear you, understand you and do it. Our staff have the skills in order to face all your challenges." %} </p>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="widget">
+							<h5>{% trans "Links" %}</h5>
+							<hr />
+							<div class="two-col">
+								<div class="col-left">
+									<ul>
+										<li><a href="http://www.shidix.com">Shidix</a></li>
+										<li><a href="http://www.ull.es">Universidad de La Laguna</a></li>
+										{% comment %}
+										<li><a href="#">Fusce vel</a></li>
+										<li><a href="#">Vivamus</a></li>
+										<li><a href="#">Pellentesque</a></li>
+										<li><a href="#">Vivamus</a></li>
+										{% endcomment %}
+									</ul>
+								</div>
+								<div class="col-right">
+									{% comment %}
+									<ul>
+										<li><a href="#">Condimentum</a></li>
+										<li><a href="#">Etiam at</a></li>
+										<li><a href="#">Fusce vel</a></li>
+										<li><a href="#">Vivamus</a></li>
+										<li><a href="#">Pellentesque</a></li>
+										<li><a href="#">Vivamus</a></li>
+									</ul>
+									{% endcomment %}
+								</div>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<hr />
+				<!-- Copyright info -->
+				<p class="copy">Copyright &copy; 2013 | <a href="http://www.shidix.com">Shidix Technologies</a> - <a href="#">Home</a> | <a href="#">About Us</a> | <a href="#">Service</a> | <a href="#">Contact Us</a></p>
+			</div>
+		</div>
+	<div class="clearfix"></div>
+	</div>
+</footer> 	
+<!-- Footer ends -->
+
+<!-- Scroll to top -->
+<span class="totop"><a href="#"><i class="icon-chevron-up"></i></a></span> 
+
+<!-- JS -->
+<script src="{% static "macbeath-frontend/js/jquery.js" %}"></script> <!-- jQuery -->
+<script src="{% static "macbeath-frontend/js/bootstrap.js" %}"></script> <!-- Bootstrap -->
+<script src="{% static "macbeath-frontend/js/jquery.isotope.js" %}"></script> <!-- Isotope -->
+<script src="{% static "macbeath-frontend/js/jquery.prettyPhoto.js" %}"></script> <!-- Pretty Photo -->
+<script src="{% static "macbeath-frontend/js/filter.js" %}"></script> <!-- Filter for support page -->
+
+<script src="{% static "macbeath-frontend/js/jquery.flexslider-min.js" %}"></script> <!-- Flex slider -->
+<script src="{% static "macbeath-frontend/js/jquery.cslider.js" %}"></script> <!-- Parallax Slider -->
+<script src="{% static "macbeath-frontend/js/modernizr.custom.28468.js" %}"></script> <!-- Parallax slider extra -->
+
+<script src="{% static "macbeath-frontend/js/jquery.carouFredSel-6.1.0-packed.js" %}"></script> <!-- Carousel for recent posts -->
+<script src="{% static "macbeath-frontend/js/jquery.refineslide.min.js" %}"></script> <!-- Refind slider -->
+<script src="{% static "macbeath-frontend/js/custom.js" %}"></script> <!-- Custom codes -->
+</body>
+</html>

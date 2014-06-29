@@ -1,0 +1,11 @@
+TODO File
+- Seguir enlaces javascript, ajax
+- Tener en cuenta el robots.txt para no escanear todo.
+	http://doc.scrapy.org/en/latest/topics/downloader-middleware.html#module-scrapy.contrib.downloadermiddleware.robotstxt
+- Tests
+	Utilizar los tests pasados en el constructor y llamarlos desde el crawler usando reflexion.
+	Enlaces rotos. Test response.status
+
+- Resultados
+	Gráficas
+
