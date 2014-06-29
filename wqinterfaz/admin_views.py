@@ -2,6 +2,17 @@ from django.shortcuts import redirect, render, get_object_or_404
 from wqinterfaz.models import Validator, Website
 from wqinterfaz.thread import run_crawler
 
+def list_executions(requests, website_id=None):
+    """@todo: Docstring for list_executions.
+
+    :requests: @todo
+    :website_id: @todo
+    :returns: @todo
+
+    """
+    print "AAA"
+    return render(request, 'admin/running_test.html')
+
 def run_test(request, website_id=None):
     """@todo: Docstring for prueba.
 

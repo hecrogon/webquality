@@ -10,7 +10,10 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+
     url(r'^admin/wqinterfaz/run_test/(?P<website_id>\d+)/$', 'wqinterfaz.admin_views.run_test', name='run_test'),
+    url(r'^admin/wqinterfaz/list_executions/(?P<website_id>\d+)/$', 'wqinterfaz.admin_views.list_executions', name='list_executions'),
+
     url(r'^admin/', include(admin.site.urls)),
     url(r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt'), {'mimetype': 'text/plain'}),
     url(r'^sitemap\.xml$', TemplateView.as_view(template_name='sitemap.xml'), {'mimetype': 'application/xml'}),

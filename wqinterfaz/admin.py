@@ -14,8 +14,9 @@ class WebsiteAdmin(admin.ModelAdmin):
         return qs.filter(user=request.user)
 
     def object_link(self, obj):
-        url = reverse('run_test', kwargs={'website_id':obj.id})
-        return '<a href="%s">Run</a>' % (url)
+        url1 = reverse('run_test', kwargs={'website_id':obj.id})
+        url2 = reverse('list_executions', kwargs={'website_id':obj.id})
+        return '<a href="%s">Run</a><a href="%s">List</a>' % (url1, url2)
     object_link.allow_tags = True
 
 admin.site.register(Website, WebsiteAdmin)
