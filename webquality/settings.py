@@ -134,6 +134,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'json_field',
+    'endless_pagination',
     'scrapy',
     'wqinterfaz',
 )

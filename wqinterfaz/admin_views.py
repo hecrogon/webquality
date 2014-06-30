@@ -1,17 +1,39 @@
 from django.shortcuts import redirect, render, get_object_or_404
-from wqinterfaz.models import Validator, Website
+from wqinterfaz.models import Execution, Validator, Website
 from wqinterfaz.thread import run_crawler
 
-def list_executions(requests, website_id=None):
+def list_executions(request, website_id=None):
     """@todo: Docstring for list_executions.
 
-    :requests: @todo
+    :request: @todo
     :website_id: @todo
     :returns: @todo
 
     """
-    print "AAA"
-    return render(request, 'admin/running_test.html')
+    website = Website.objects.filter(pk=website_id)
+    executions = Execution.objects.filter(user=request.user, website=website)
+
+    if request.is_ajax():
+        template = 'admin/list_executions_page.html'
+    else:
+        template = 'admin/list_executions.html'
+    return render(request, template, {
+        'executions': executions,
+        'page_template': 'admin/list_executions_page.html',
+    })
+
+def view_execution(request, execution_id):
+    """@todo: Docstring for view_execution.
+
+    :request: @todo
+    :execution_id: @todo
+    :returns: @todo
+
+    """
+    execution = Execution.objects.get(pk=execution_id)
+    validator = Validator.objects.filter(execution=execution)[0]
+
+    return redirect('wqinterfaz.views.view_execution_by_validator', execution_id=execution.id, validator_id=validator.id)
 
 def run_test(request, website_id=None):
     """@todo: Docstring for prueba.
