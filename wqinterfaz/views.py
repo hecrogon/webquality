@@ -5,7 +5,6 @@ from django.shortcuts import redirect, render, get_object_or_404
 
 from wqinterfaz.models import Execution, Result, Validator, Website
 from wqinterfaz.thread import run_crawler
-from wqinterfaz.forms import WebsiteForm
 
 from scrapy.crawler import Crawler
 from scrapy.settings import Settings
@@ -32,25 +31,6 @@ def list_websites(request):
 def view_website(request, website_id):
     website = Website.objects.get(pk=website_id)
     return render(request, 'websites/view_website.html', { 'website': website })
-
-@login_required
-def edit_website(request, website_id=None):
-    if website_id:
-        website = Website.objects.get(pk=website_id)
-    else:
-        website = Website(user=request.user)
-
-    if request.method == 'POST':
-        form = WebsiteForm(request.POST, instance=website)
-
-        if form.is_valid():        
-            form.save()
-
-            return HttpResponseRedirect(reverse('site_list_websites'))
-    else:
-        form = WebsiteForm(instance=website)
-
-    return render(request, 'websites/website_form.html', {'form': form,})
 
 @login_required
 def delete_website(request, website_id):

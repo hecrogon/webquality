@@ -15,11 +15,25 @@ class WebsiteAdmin(admin.ModelAdmin):
 
     def object_link(self, obj):
         url1 = reverse('run_test', kwargs={'website_id':obj.id})
-        url2 = reverse('list_executions', kwargs={'website_id':obj.id})
+#        url2 = reverse('list_executions', kwargs={'website_id':obj.id})
+        url2 = '/admin/wqinterfaz/execution/?website__id__exact=%s' % (obj.id)
         return '<a href="%s">Run</a><a href="%s">List</a>' % (url1, url2)
     object_link.allow_tags = True
 
-admin.site.register(Website, WebsiteAdmin)
-admin.site.register(Validator)
-admin.site.register(ValidatorType)
+class ExecutionAdmin(admin.ModelAdmin):
+    list_display = ('website', 'start_date', 'end_date', 'object_link',)
+    list_filter = ('website',)
 
+    def object_link(self, obj):
+        url = '/admin/wqinterfaz/result/?execution__id__exact=%s' % (obj.id)
+        return '<a href="%s">Results</a>' % (url)
+    object_link.allow_tags = True
+
+class ResultAdmin(admin.ModelAdmin):
+    list_display = ('description', 'page', 'validator',)
+    list_filter = ('validator',)
+
+admin.site.register(Execution, ExecutionAdmin)
+admin.site.register(Website, WebsiteAdmin)
+admin.site.register(Result, ResultAdmin)
+admin.site.register(Validator)
