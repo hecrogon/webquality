@@ -135,7 +135,7 @@ INSTALLED_APPS = (
     'json_field',
     'endless_pagination',
     'scrapy',
-    'wqinterfaz',
+    'admin_wq',
 )
 
 # A sample logging configuration. The only tangible logging

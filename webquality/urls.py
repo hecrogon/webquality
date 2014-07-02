@@ -12,9 +12,9 @@ urlpatterns = patterns('',
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
 
-    url(r'^admin/wqinterfaz/run_test/(?P<website_id>\d+)/$', 'wqinterfaz.admin_views.run_test', name='run_test'),
-    url(r'^admin/wqinterfaz/list_executions/(?P<website_id>\d+)/$', 'wqinterfaz.admin_views.list_executions', name='list_executions'),
-    url(r'^admin/wqinterfaz/view_execution/(?P<execution_id>\d+)/$', 'wqinterfaz.admin_views.view_execution', name='view_execution'),
+    url(r'^admin/admin_wq/run_test/(?P<website_id>\d+)/$', 'admin_wq.admin_views.run_test', name='run_test'),
+    url(r'^admin/admin_wq/list_executions/(?P<website_id>\d+)/$', 'admin_wq.admin_views.list_executions', name='list_executions'),
+    url(r'^admin/admin_wq/view_execution/(?P<execution_id>\d+)/$', 'admin_wq.admin_views.view_execution', name='view_execution'),
 
     url(r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt'), {'mimetype': 'text/plain'}),
     url(r'^sitemap\.xml$', TemplateView.as_view(template_name='sitemap.xml'), {'mimetype': 'application/xml'}),
@@ -22,5 +22,5 @@ urlpatterns = patterns('',
 
 urlpatterns += i18n_patterns('',
     url(r'^$', RedirectView.as_view(url='site/')),
-    url(r'^site/', include('wqinterfaz.urls')),
+    url(r'^site/', include('admin_wq.urls')),
 )

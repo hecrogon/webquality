@@ -3,8 +3,8 @@ from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect, render, get_object_or_404
 
-from wqinterfaz.models import Execution, Result, Validator, Website
-from wqinterfaz.thread import run_crawler
+from admin_wq.models import Execution, Result, Validator, Website
+from admin_wq.thread import run_crawler
 
 from scrapy.crawler import Crawler
 from scrapy.settings import Settings
@@ -56,7 +56,7 @@ def view_execution(request, execution_id):
     execution = Execution.objects.get(pk=execution_id)
     validator = Validator.objects.filter(execution=execution)[0]
 
-    return redirect('wqinterfaz.views.view_execution_by_validator', execution_id=execution.id, validator_id=validator.id)
+    return redirect('admin_wq.views.view_execution_by_validator', execution_id=execution.id, validator_id=validator.id)
 
 @login_required
 def view_execution_by_validator(request, execution_id, validator_id):

@@ -1,6 +1,6 @@
 [
 	{
-		"model": "wqinterfaz.validatortype",
+		"model": "admin_wq.validatortype",
 		"pk": 1,
 		"fields": {
 			"creation_date": "2013-07-16T17:41:28+00:00",
@@ -10,7 +10,7 @@
 		}
 	},
 	{
-		"model": "wqinterfaz.validatortype",
+		"model": "admin_wq.validatortype",
 		"pk": 2,
 		"fields": {
 			"creation_date": "2013-07-16T17:41:28+00:00",
@@ -21,7 +21,7 @@
 	},
 
 	{
-		"model": "wqinterfaz.validator",
+		"model": "admin_wq.validator",
 		"pk": 1,
 		"fields": {
 			"creation_date": "2013-07-16T17:41:28+00:00",
@@ -33,7 +33,7 @@
 		}
 	},
 	{
-		"model": "wqinterfaz.validator",
+		"model": "admin_wq.validator",
 		"pk": 2,
 		"fields": {
 			"creation_date": "2013-07-16T17:41:28+00:00",
@@ -45,7 +45,7 @@
 		}
 	},
 	{
-		"model": "wqinterfaz.validator",
+		"model": "admin_wq.validator",
 		"pk": 3,
 		"fields": {
 			"creation_date": "2013-07-16T17:41:28+00:00",
@@ -58,7 +58,7 @@
 		}
 	},
 	{
-		"model": "wqinterfaz.validator",
+		"model": "admin_wq.validator",
 		"pk": 4,
 		"fields": {
 			"creation_date": "2013-07-16T17:41:28+00:00",
@@ -71,7 +71,7 @@
 		}
 	},
 	{
-		"model": "wqinterfaz.validator",
+		"model": "admin_wq.validator",
 		"pk": 5,
 		"fields": {
 			"creation_date": "2013-07-16T17:41:28+00:00",
@@ -84,7 +84,7 @@
 		}
 	},
 	{
-		"model": "wqinterfaz.website",
+		"model": "admin_wq.website",
 		"pk": 1,
 		"fields": {
 			"creation_date": "2013-07-16T17:41:28+00:00",
@@ -96,7 +96,7 @@
 		}
 	},
 	{
-		"model": "wqinterfaz.website",
+		"model": "admin_wq.website",
 		"pk": 2,
 		"fields": {
 			"creation_date": "2013-07-16T17:41:28+00:00",

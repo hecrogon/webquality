@@ -25,7 +25,7 @@ import webquality.settings
 import sys, os
 sys.path.append('/home/hector/develop/webquality')
 os.environ['DJANGO_SETTINGS_MODULE'] ='webquality.settings'
-from wqinterfaz.models import Execution, Page, Result, Website
+from admin_wq.models import Execution, Page, Result, Website
 from django.core.exceptions import ObjectDoesNotExist
 
 class PageMiddleware(object):

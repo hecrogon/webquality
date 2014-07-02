@@ -20,7 +20,7 @@ import sys, os
 
 sys.path.append('/home/hector/develop/webquality')
 os.environ['DJANGO_SETTINGS_MODULE'] ='webquality.settings'
-from wqinterfaz.models import Execution, Result, Website
+from admin_wq.models import Execution, Result, Website
 from django.db import transaction
 
 import cStringIO

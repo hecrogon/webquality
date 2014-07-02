@@ -8,7 +8,7 @@ from scrapy.utils.project import get_project_settings
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'webquality.settings'
 from django.contrib.auth.models import User
-from wqinterfaz.models import Execution, Result, Website, Validator
+from admin_wq.models import Execution, Result, Website, Validator
 os.environ['SCRAPY_SETTINGS_MODULE'] = 'crawler.settings'
 
 def setup_crawler(user, website, validator_set, parameters):

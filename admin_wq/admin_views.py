@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render, get_object_or_404
-from wqinterfaz.models import Execution, Validator, Website
-from wqinterfaz.thread import run_crawler
+from admin_wq.models import Execution, Validator, Website
+from admin_wq.thread import run_crawler
 
 def list_executions(request, website_id=None):
     """@todo: Docstring for list_executions.
@@ -33,7 +33,7 @@ def view_execution(request, execution_id):
     execution = Execution.objects.get(pk=execution_id)
     validator = Validator.objects.filter(execution=execution)[0]
 
-    return redirect('wqinterfaz.views.view_execution_by_validator', execution_id=execution.id, validator_id=validator.id)
+    return redirect('admin_wq.views.view_execution_by_validator', execution_id=execution.id, validator_id=validator.id)
 
 def run_test(request, website_id=None):
     """@todo: Docstring for prueba.

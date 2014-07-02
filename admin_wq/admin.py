@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.core.urlresolvers import reverse
-from wqinterfaz.models import *
+from admin_wq.models import *
 
 class WebsiteAdmin(admin.ModelAdmin):
     list_display = ('name', 'domain', 'start_url', 'object_link')
@@ -16,7 +16,7 @@ class WebsiteAdmin(admin.ModelAdmin):
     def object_link(self, obj):
         url1 = reverse('run_test', kwargs={'website_id':obj.id})
 #        url2 = reverse('list_executions', kwargs={'website_id':obj.id})
-        url2 = '/admin/wqinterfaz/execution/?website__id__exact=%s' % (obj.id)
+        url2 = '/admin/admin_wq/execution/?website__id__exact=%s' % (obj.id)
         return '<a href="%s">Run</a><a href="%s">List</a>' % (url1, url2)
     object_link.allow_tags = True
 
@@ -25,7 +25,7 @@ class ExecutionAdmin(admin.ModelAdmin):
     list_filter = ('website',)
 
     def object_link(self, obj):
-        url = '/admin/wqinterfaz/result/?execution__id__exact=%s' % (obj.id)
+        url = '/admin/admin_wq/result/?execution__id__exact=%s' % (obj.id)
         return '<a href="%s">Results</a>' % (url)
     object_link.allow_tags = True
 
