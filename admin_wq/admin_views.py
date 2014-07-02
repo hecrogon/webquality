@@ -2,6 +2,8 @@ from django.shortcuts import redirect, render, get_object_or_404
 from admin_wq.models import Execution, Validator, Website
 from admin_wq.thread import run_crawler
 
+import threading
+
 def list_executions(request, website_id=None):
     """@todo: Docstring for list_executions.
 
@@ -57,10 +59,10 @@ def run_test(request, website_id=None):
                     validator_parameters["fields"][field["name"]] =  value
                 parameters[validator.classname] = validator_parameters
 
-#        threads = list()
-#        t = threading.Thread(target=run_crawler, args=(request.user, website, validator_set, parameters))
-#        threads.append(t)
-#        t.start()
+        threads = list()
+        t = threading.Thread(target=run_crawler, args=(request.user, website, validator_set, parameters))
+        threads.append(t)
+        t.start()
 
         return render(request, 'admin/running_test.html')
     else:

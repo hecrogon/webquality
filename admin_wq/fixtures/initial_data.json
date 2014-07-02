@@ -63,9 +63,9 @@
 		"fields": {
 			"creation_date": "2013-07-16T17:41:28+00:00",
 			"modification_date": "2013-07-16T17:41:28+00:00",
-			"name": "Cabovolo",
-			"domain": "www.cabovolo.com",
-			"start_url": "http://www.cabovolo.com",
+			"name": "Húsar de Salón",
+			"domain": "husardesalon.blogspot.com.es",
+			"start_url": "http://husardesalon.blogspot.com.es",
 			"user": 1
 		}
 	},
@@ -75,9 +75,9 @@
 		"fields": {
 			"creation_date": "2013-07-16T17:41:28+00:00",
 			"modification_date": "2013-07-16T17:41:28+00:00",
-			"name": "Web ULL Pre",
-			"domain": "wwwpre.ull.es",
-			"start_url": "http://wwwpre.ull.es/view/institucional/ull/Inicio/es",
+			"name": "Wonkapistas",
+			"domain": "wonkapistas.blogspot.com.es",
+			"start_url": "http://wonkapistas.blogspot.com.es",
 			"user": 1
 		}
 	}
