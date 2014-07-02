@@ -1,26 +1,5 @@
 [
 	{
-		"model": "admin_wq.validatortype",
-		"pk": 1,
-		"fields": {
-			"creation_date": "2013-07-16T17:41:28+00:00",
-			"modification_date": "2013-07-16T17:41:28+00:00",
-			"code": "vt01",
-			"name": "Internal Test"
-		}
-	},
-	{
-		"model": "admin_wq.validatortype",
-		"pk": 2,
-		"fields": {
-			"creation_date": "2013-07-16T17:41:28+00:00",
-			"modification_date": "2013-07-16T17:41:28+00:00",
-			"code": "vt02",
-			"name": "External Test"
-		}
-	},
-
-	{
 		"model": "admin_wq.validator",
 		"pk": 1,
 		"fields": {
@@ -28,8 +7,7 @@
 			"modification_date": "2013-07-16T17:41:28+00:00",
 			"classname": "W3CValidator",
 			"name": "W3C Validator",
-			"description": "Check HTML errors.",
-			"validator_type": "1"
+			"description": "Check HTML errors."
 		}
 	},
 	{
@@ -40,8 +18,7 @@
 			"modification_date": "2013-07-16T17:41:28+00:00",
 			"classname": "BrokenLinksValidator",
 			"name": "Broken Links Validator",
-			"description": "Search for links broken.",
-			"validator_type": "1"
+			"description": "Search for links broken."
 		}
 	},
 	{
@@ -53,7 +30,6 @@
 			"classname": "ImagesValidator",
 			"name": "Images Validator",
 			"description": "Check images.",
-			"validator_type": "1",
 			"parameters": {"fields": [{"type": "integer", "name": "width", "description": "Width", "default_value": "1024"}, {"type": "integer", "name": "height", "description": "Height", "default_value": "768"}, {"type": "integer", "name": "size", "description": "Size (Kb)", "default_value": "1024"}]}
 		}
 	},
@@ -66,7 +42,6 @@
 			"classname": "SpellingValidator",
 			"name": "Spelling Validator",
 			"description": "Spelling mistakes.",
-			"validator_type": "1",
 			"parameters": {"fields": [{"type": "string", "name": "language", "description": "Language", "default_value": "es_ES"}]}
 		}
 	},
@@ -79,7 +54,6 @@
 			"classname": "DownloadTimeValidator",
 			"name": "Download Time Validator",
 			"description": "Download Time Validator.",
-			"validator_type": "1",
 			"parameters": {"fields": [{"type": "float", "name": "time", "description": "Time (ms)", "default_value": "100"}]}
 		}
 	},

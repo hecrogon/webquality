@@ -28,20 +28,11 @@ class Website(Base):
     class Meta:
         ordering = ['name']
 
-class ValidatorType(Base):
-    code = models.CharField(max_length=200, verbose_name=_("Code"))
-    name = models.CharField(max_length=200, verbose_name=_("Name"))
-    validator_classname = models.CharField(max_length=200)
-
-    def __unicode__(self):
-        return self.name
-
 class Validator(Base):
     classname = models.CharField(max_length=200, verbose_name=_("Class name"))
     name = models.CharField(max_length=200, verbose_name=_("Name"))
     description = models.TextField(verbose_name=_("Name"))
     parameters = JSONField()
-    validator_type = models.ForeignKey(ValidatorType, verbose_name=_("Type"))
 
     def __unicode__(self):
         return self.name
