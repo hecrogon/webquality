@@ -30,8 +30,15 @@ class ExecutionAdmin(admin.ModelAdmin):
     object_link.allow_tags = True
 
 class ResultAdmin(admin.ModelAdmin):
-    list_display = ('description', 'page', 'validator',)
+    list_display = ('validator', 'page', 'verbose_result',)
     list_filter = ('validator',)
+
+    def verbose_result(self, obj):
+        errors = ""
+        for error in obj.description['errors']:
+            errors = errors + str(error['error']) + '<br>'
+        return errors
+    verbose_result.allow_tags = True
 
 admin.site.register(Execution, ExecutionAdmin)
 admin.site.register(Website, WebsiteAdmin)

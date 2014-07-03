@@ -50,8 +50,12 @@ class Page(Base):
     user = models.ForeignKey(User, verbose_name=_("User"))
     website = models.ForeignKey(Website)
 
+    def __unicode__(self):
+        return self.url
+
 class Result(Base):
     description = JSONField()
     execution = models.ForeignKey(Execution)
     page = models.ForeignKey(Page)
     validator = models.ForeignKey(Validator)
+
