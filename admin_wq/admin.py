@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.core.urlresolvers import reverse
 from admin_wq.models import *
+from admin_wq.lib import html_escape
 
 class WebsiteAdmin(admin.ModelAdmin):
     list_display = ('name', 'domain', 'start_url', 'object_link')
@@ -30,13 +31,17 @@ class ExecutionAdmin(admin.ModelAdmin):
     object_link.allow_tags = True
 
 class ResultAdmin(admin.ModelAdmin):
-    list_display = ('validator', 'page', 'verbose_result',)
+    list_display = ('validator', 'verbose_page', 'verbose_result',)
     list_filter = ('validator',)
+
+    def verbose_page(self, obj):
+        return '<a href="%s">%s</a>' % (obj.page.url, obj.page.url[0:80])
+    verbose_page.allow_tags = True
 
     def verbose_result(self, obj):
         errors = ""
         for error in obj.description['errors']:
-            errors = errors + str(error['error']) + '<br>'
+            errors = errors + html_escape(error['error']) + '<br>'
         return errors
     verbose_result.allow_tags = True
 
